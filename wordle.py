@@ -31,6 +31,8 @@ class Wordle:
         for i in range(6): # user gets 6 attempts
             # initialize variable for duplicate guess
             self.word_duplicate = list(self.word)
+            
+
 
             # initialize failed_dctionary_test
             # Add later if needed
@@ -80,8 +82,8 @@ class Wordle:
             print(responseString)
 
             if guess == self.word:
-                print(f"Congratulations! You have guessed the word in {i+1} attempts.")
-        print(f"Sorry, you have run out of attempts. The word was {self.word}.")
+                return(f"Congratulations! You have guessed the word in {i+1} attempts.")
+        return(f"Sorry, you have run out of attempts. The word was {self.word}.")
         quit()
     
 
@@ -156,18 +158,20 @@ class Wordle:
             if len(self.guesses) < 6:
                 self.guesses.append(guess)
             else:
-                return "You have run out of guesses, the word was {self.word}."
+                return f"You have run out of guesses, the word was {self.word}."
 
         # Return the response
-
+        guesses_left = (f"{6 - len(self.guesses)} guesses left.")
         if guessed_correctly:
             return responseString, True
         else:    
-            return responseString, False
+
+            return responseString, False, guesses_left
 
     # Reset guesses
         def reset(self):
-            self.guesses = []      
+            self.guesses = []   
+
 
     # Game over
     def is_over(self):
