@@ -14,3 +14,5 @@ def daily_random_word(daily: bool = True):
         return jumbled_words[iteration]
         
 
+def random_word():
+    return jumbled_words[random.randint(0, len(jumbled_words))]
