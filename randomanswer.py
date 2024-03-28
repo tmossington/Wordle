@@ -1,6 +1,7 @@
 from dictionary import jumbled_words
 from datetime import datetime
 import math
+import random
 
 # Find UNIX timestamp
 current_time = datetime.now()
