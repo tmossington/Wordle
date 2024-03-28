@@ -1,6 +1,7 @@
 ## Main Wordle file for game
 
-#import other modules such as dict and random answer
+import dictionary
+import randomanswer
 
 class Wordle:
     # Main class for the Wordle game, takes arguments and checks against dictionary.
