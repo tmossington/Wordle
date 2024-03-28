@@ -89,7 +89,7 @@ class Wordle:
               
             
 
-    def send_guess(self, guess: str, log_guess: bool = True):
+    def send(self, guess: str, log_guess: bool = True):
     # 
         # send individual guesses to the game and return a tuple where item 1 is the string response, and item 2 is a boolean if the guess was correct
 
