@@ -2,18 +2,6 @@
 
 #import other modules such as dict and random answer
 
-
-# define class Wordle
-
-    # define __init__ method
-
-    # define the game parameters
-    # restrict to 6 attempts
-    # make sure the word is 5 letters long and is in the dictionary
-
-
-    # define the guessing method
-
 class Wordle:
     # Main class for the Wordle game, takes arguments and checks against dictionary.
     def __init__(self, word: str = 'hello', enforce_length: bool = True, real_word: bool = True, random_daily: bool = False):
@@ -92,7 +80,16 @@ class Wordle:
                 else:
                     response[j] = guess[j].lower() + "    "
 
-            
+            responseString = ""
+            for letter in response:
+                responseString += letter
+            print(responseString)
+
+            if guess == self.word:
+                print(f"Congratulations! You have guessed the word in {i+1} attempts.")
+        print(f"Sorry, you have run out of attempts. The word was {self.word}.")
+        quit()
+    
 
               
             
