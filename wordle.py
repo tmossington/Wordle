@@ -1,5 +1,4 @@
 ## Main Wordle file for game
-
 import dictionary
 import randomanswer
 
@@ -60,7 +59,7 @@ class Wordle:
             # Check for correct letters in correct position
             for j in range(len(guess)):
                 if guess[j] in self.word_duplicate and guess[j] == self.word[j]:
-                    response[j] = f"*{guess[j]}*    "
+                    response[j] = f"__{guess[j]}__    "
                     self.word_duplicate.remove(guess[j]) # remove the letter from the list
 
             # next present and absent check for letters in the word, but not the right position
@@ -123,7 +122,7 @@ class Wordle:
         for j in range(len(guess)):
             try:
                 if guess[j] == self.word[j]:
-                    response[j] = f"*{guess[j]}*    "
+                    response[j] = f"__{guess[j]}__    "
                     self.word_duplicate.remove(guess[j])
                     continue
             except IndexError:
